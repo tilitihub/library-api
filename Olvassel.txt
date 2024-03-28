@@ -1,0 +1,50 @@
+Könyvtárak Könyvkölcsönzési Rendszere
+0. Összefoglalás
+Ez a szoftveralkalmazás egy teljes körű megoldást kínál a könyvtárak számára a könyvek kölcsönzésének egyszerűsítésére. A RESTful architektúra, a tiszta kód elvei és a jól dokumentált forráskód biztosítják a rendszer hatékonyságát, karbantarthatóságát és könnyű használatát.
+
+1. Bevezetés
+Ez a dokumentáció a Könyvtárak Könyvkölcsönzési Rendszerének (Library Loan System) célját, technikai leírását, működésének műszaki feltételeit, és használatának rövid bemutatását tartalmazza. A rendszer lehetővé teszi a könyvtárak számára a könyvek kölcsönzésének, a felhasználói adatok kezelésének, és a könyvek elérhetőségének nyomon követését.
+
+2. Technikai Leírás
+2.1 Szerveroldali Komponens
+A szerveroldali komponens egy RESTful API-t biztosít, amely lehetővé teszi a kliensoldali alkalmazások számára a könyvek, felhasználók és kölcsönzések adatainak kezelését. A szerver Node.js és Express.js keretrendszereket használja, adatbázisul pedig MariaDB-t.
+A MariaDB használata lehetővé teszi a relációs adatbázis előnyeinek kihasználását, mint például a komplex lekérdezések, a tranzakciók, és a sokoldalú adatintegritás-kezelés. Ez a választás jól illik a könyvtárak számára a könyvek, felhasználók, és kölcsönzések adatainak kezelésére.
+
+2.2 Kliensoldali Komponens
+Webes Kliens: A webes kliens egy React.js alkalmazás, amely lehetővé teszi a felhasználóknak és az adminisztrátoroknak a könyvek, felhasználók és kölcsönzések kezelését.
+Mobil Kliens: A mobil kliens egy React Native alkalmazás, amely lehetővé teszi a felhasználóknak a könyvek kölcsönzését és visszavételét mobil eszközökön.
+Asztali Kliens: Az asztali kliens egy Electron.js alkalmazás, amely lehetővé teszi az adminisztrátoroknak a könyvtár adatainak kezelését asztali alkalmazás formájában.
+
+3. Műszaki Feltételek
+Szerver: Node.js 14.x vagy újabb, Express.js 4.x vagy újabb, MariaDB 10.x vagy újabb.
+Kliensoldali Alkalmazások: Modern webböngésző (Chrome, Firefox, Safari), Node.js 14.x vagy újabb a React.js és React Native fejlesztéséhez, Android Studio és Android SDK a React Native fejlesztéséhez, valamint Electron.js 13.x vagy újabb az Electron.js fejlesztéséhez.
+
+4. Használat
+4.1 RESTful API
+A RESTful API végpontokat a következők szerint használhatjuk:
+Könyvek:
+GET /api/books: Összes könyv listázása.
+POST /api/books: Új könyv hozzáadása.
+PUT /api/books/:id: Könyv adatainak módosítása.
+DELETE /api/books/:id: Könyv törlése.
+Felhasználók:
+GET /api/users: Összes felhasználó listázása.
+POST /api/users: Új felhasználó hozzáadása.
+PUT /api/users/:id: Felhasználó adatainak módosítása.
+DELETE /api/users/:id: Felhasználó törlése.
+Kölcsönzések:
+GET /api/loans: Összes kölcsönzés listázása.
+POST /api/loans: Új kölcsönzés hozzáadása.
+PUT /api/loans/:id: Kölcsönzés adatainak módosítása.
+DELETE /api/loans/:id: Kölcsönzés törlése.
+
+4.2 Kliensoldali Alkalmazások
+Webes Kliens: A webes kliens használatához nyisd meg a böngésződben a http://localhost:3000 címet.
+Mobil Kliens: Telepítsd az alkalmazást az Android eszközödre vagy futtasd egy iOS eszközön a React Native CLI segítségével.
+Asztali Kliens: Telepítsd és futtasd az Electron.js alkalmazást a forráskódból vagy a letöltött csomagból.
+
+4.3 Adminisztrációs Felület
+Az adminisztrációs felület használatához nyisd meg az Electron.js alkalmazást, amely lehetővé teszi a könyvek, felhasználók és kölcsönzések kezelését asztali alkalmazás formájában.
+
+5. Fejlesztés és Tesztelés
+A fejlesztés és tesztelés során fontos, hogy a kód tiszta, moduláris legyen, és hogy a tesztek lefedjék az alkalmazás összes funkcióját. A npm test parancs segítségével futtathatók a tesztek.

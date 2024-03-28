@@ -1,0 +1,28 @@
+{
+  "name": "library-api",
+  "version": "1.0.0",
+  "description": "A simple library API",
+  "main": "server.js",
+  "scripts": {
+     "start": "node server.js",
+     "test": "mocha tests"
+  },
+  "keywords": [
+     "library",
+     "api",
+     "express",
+     "mariadb"
+  ],
+  "author": "TiliTibi",
+  "license": "ISC",
+  "dependencies": {
+     "bcryptjs": "^2.4.3",
+     "express": "^4.19.2",
+     "jsonwebtoken": "^9.0.2",
+     "mariadb": "^3.3.0"
+  },
+  "devDependencies": {
+     "chai": "^5.1.0",
+     "mocha": "^10.4.0"
+  }
+ }
